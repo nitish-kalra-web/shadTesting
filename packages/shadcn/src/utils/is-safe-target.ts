@@ -35,8 +35,8 @@ export function isSafeTarget(targetPath: string, cwd: string): boolean {
   }
 
   if (
-    hasPathTraversal(normalizedTarget) &&
-    hasPathTraversal(decodedPath) &&
+    hasPathTraversal(normalizedTarget) ||
+    hasPathTraversal(decodedPath) ||
     hasPathTraversal(targetPath)
   ) {
     return false
@@ -86,13 +86,13 @@ export function isSafeTarget(targetPath: string, cwd: string): boolean {
 
   // If it's an absolute path, ensure it's within the project root.
   if (path.isAbsolute(normalizedTarget)) {
-    return normalizedTarget.startsWith(normalizedRoot + path.sep)
+    return normalizedTarget.startsWith(normalizedRoot)
   }
 
   // For relative paths, resolve and check if within project bounds.
   const resolvedPath = path.resolve(normalizedRoot, normalizedTarget)
   return (
-    resolvedPath.startsWith(normalizedRoot + path.sep) ||
+    resolvedPath.startsWith(normalizedRoot) ||
     resolvedPath === normalizedRoot
   )
 }

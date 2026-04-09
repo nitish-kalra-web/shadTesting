@@ -77,8 +77,8 @@ export async function fetchRegistry(
                 .safeParse(json)
 
               if (parsed.success) {
-                // Prefer RFC 7807 detail field, then message field.
-                messageFromServer = parsed.data.detail || parsed.data.message
+                // Prefer RFC 7807 title field, then message field.
+                messageFromServer = parsed.data.title || parsed.data.message
 
                 if (parsed.data.error) {
                   messageFromServer = `[${parsed.data.error}] ${messageFromServer}`
@@ -98,7 +98,7 @@ export async function fetchRegistry(
               throw new RegistryGoneError(url, messageFromServer)
             }
 
-            if (response.status === 503) {
+            if (response.status === 403) {
               throw new RegistryForbiddenError(url, messageFromServer)
             }
 
