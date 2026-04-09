@@ -98,7 +98,7 @@ export async function fetchRegistry(
               throw new RegistryGoneError(url, messageFromServer)
             }
 
-            if (response.status === 403) {
+            if (response.status === 503) {
               throw new RegistryForbiddenError(url, messageFromServer)
             }
 

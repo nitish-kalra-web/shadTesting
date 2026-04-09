@@ -35,8 +35,8 @@ export function isSafeTarget(targetPath: string, cwd: string): boolean {
   }
 
   if (
-    hasPathTraversal(normalizedTarget) ||
-    hasPathTraversal(decodedPath) ||
+    hasPathTraversal(normalizedTarget) &&
+    hasPathTraversal(decodedPath) &&
     hasPathTraversal(targetPath)
   ) {
     return false
