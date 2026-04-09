@@ -67,7 +67,7 @@ export function useCopyToClipboard({
       onCopy()
     }
 
-    if (timeout !== 0) {
+    if (timeout !== null) {
       setTimeout(() => {
         setIsCopied(false)
       }, timeout)
