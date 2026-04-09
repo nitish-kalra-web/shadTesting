@@ -58,8 +58,8 @@ importers:
         specifier: ^15.0.0
         version: 15.5.11(eslint@9.26.0(hono@4.11.7)(jiti@1.21.7))(typescript@5.9.2)
       eslint-config-prettier:
-        specifier: ^8.8.0
-        version: 8.10.2(eslint@9.26.0(hono@4.11.7)(jiti@1.21.7))
+        specifier: ^10.1.8
+        version: 10.1.8(eslint@9.26.0(hono@4.11.7)(jiti@1.21.7))
       eslint-config-turbo:
         specifier: ^1.9.9
         version: 1.13.4(eslint@9.26.0(hono@4.11.7)(jiti@1.21.7))
@@ -3992,7 +3992,7 @@ packages:
   basic-ftp@5.0.5:
     resolution: {integrity: sha512-4Bcg1P8xhUuqcii/S0Z9wiHIrQVPMermM1any+MX5GeGD7faD3/msQUDGLol9wOcz4/jbg/WJnGqoJF6LiBdtg==}
     engines: {node: '>=10.0.0'}
-    deprecated: Security vulnerability fixed in 5.2.0, please upgrade
+    deprecated: Security vulnerability fixed in 5.2.1, please upgrade
 
   better-path-resolve@1.0.0:
     resolution: {integrity: sha512-pbnl5XzGBdrFU/wT4jqmJVPn2B6UHPBOhzMQkY/SPUPB6QtUXtmBHBIwCbXJol93mOpGMnQyP/+BB19q04xj7g==}
@@ -4745,8 +4745,8 @@ packages:
       typescript:
         optional: true
 
-  eslint-config-prettier@8.10.2:
-    resolution: {integrity: sha512-/IGJ6+Dka158JnP5n5YFMOszjDWrXggGz1LaK/guZq9vZTmniaKlHcsscvkAhn9y4U+BU3JuUdYvtAMcv30y4A==}
+  eslint-config-prettier@10.1.8:
+    resolution: {integrity: sha512-82GZUjRS0p/jganf6q1rEO25VSoHH0hKPCTrgillPjdI/3bgBhAE1QzHrHTizjpRvy6pGAvKjDJtk2pF9NDq8w==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
@@ -12615,7 +12615,7 @@ snapshots:
       - eslint-plugin-import-x
       - supports-color
 
-  eslint-config-prettier@8.10.2(eslint@9.26.0(hono@4.11.7)(jiti@1.21.7)):
+  eslint-config-prettier@10.1.8(eslint@9.26.0(hono@4.11.7)(jiti@1.21.7)):
     dependencies:
       eslint: 9.26.0(hono@4.11.7)(jiti@1.21.7)
 
